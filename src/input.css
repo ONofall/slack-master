@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-text {
+    transition: all 0.5s;
+}
+
+.menu-text:hover {
+    transition: all 0.5s;
+}
+
+.menu::before,
+.Juice::before,
+.Pizza::before,
+.Pasta::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color:  rgb(3 105 161);
+    transition: all 0.5s;
+}
+
+.menu:hover::before,
+.Juice:hover::before,
+.Pizza:hover::before,
+.Pasta:hover::before {
+    width: 100%;
+}
+
+.btn,
+.top-img {
+    transition: all 0.5s;
+    animation-name: moveInLeft;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+.btn:hover,
+.btn-1:hover {
+    transition: all 0.5s;
+    transform: translatey(-5px);
+}
+
+.btn-1 {
+    transition: all 0.5s;
+}
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.nav,
+.img-2 {
+    transition: all 0.5s;
+    animation-name: moveInRight;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translatey(100px);
+    }
+
+    80% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
+
+.logo {
+    transition: all 0.5s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: moveInBottom;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: rotate(100deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+.h-Pasta,
+.h-Pizza,
+.h-Juice,
+.h-menu,
+.img-1 {
+    transition: all 0.5s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-name: moveIntop;
+}
+
+@keyframes moveIntop {
+    0% {
+        opacity: 0;
+        transform: translatey(-200px);
+    }
+
+    80% {
+        transform: translatey(2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
+
+.top-img:hover {
+    transition: all 0.5s;
+    transform: translatey(-30px);
+}
+
+.s {
+    transition: all 1s;
+    animation-name: move;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100rem;
+    height: 100rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.center {
+    transform: translate(48rem, 15%);
+}
