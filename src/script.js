@@ -2,53 +2,31 @@ $('.nav-icon').on('click', function () {
     $('.nav-menu').toggle();
 });
 
+// $(document).on("click", function(event){
+//     var $trigger = $(".menu-item");
+//     if (!$trigger.is(event.target) && $trigger.has(event.target).length === 0) {
+//         $(".close-m").hide(200);
+//     }
+// });
 $(document).on("click", function(event){
-    var $trigger = $(".nav-section");
-    if (!$trigger.is(event.target) && $trigger.has(event.target).length === 0) {
-        $(".nav-menu").hide(200);
+    if ($(event.target).closest(".close").length === 0) {
+        $(".close-m").hide(200);
     }
 });
 $('.menu').on('click',function () {
     $('.h-menu').toggle()
 })
-$(document).on("click", function(event) {
-    var $trigger = $(".menu");
-    if (!$trigger.is(event.target) && $trigger.has(event.target).length === 0) {
-        $(".h-menu").hide(200);
-    }
-});
-
 
 $('.Pizza').on('click',function () {
     $('.h-Pizza').toggle()
 })
-$(document).on("click", function(event){
-    var $trigger = $(".Pizza");
-    if (!$trigger.is(event.target) && $trigger.has(event.target).length === 0) {
-        $(".h-Pizza").hide(200);
-    }
-});
+
 $('.Pasta').on('click',function () {
     $('.h-Pasta').toggle()
 })
-$(document).on("click", function(event){
-    var $trigger = $(".Pasta");
-    if (!$trigger.is(event.target) && $trigger.has(event.target).length === 0) {
-        $(".h-Pasta").hide(200);
-    }
-});
+
 $('.Juice').on('click',function () {
     $('.h-Juice').toggle()
-})
-$(document).on("click", function(event){
-    var $trigger = $(".Juice");
-    if (!$trigger.is(event.target) && $trigger.has(event.target).length === 0) {
-        $(".h-Juice").hide(200);
-    }
-});
-$('.pizza-size').on('click', function() {
-    var price = $(this).attr('data-name');
-    var itemNumber = $(this).attr('pizza-size');
 })
 
 // price section
